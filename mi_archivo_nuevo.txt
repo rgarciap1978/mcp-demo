@@ -1,8 +1,0 @@
-Este es un archivo de texto creado para demostrar el uso de Git.
-
-Contenido del archivo:
-- Fecha de creación: 18 de julio de 2025
-- Propósito: Ejemplo para staging area
-- Estado: Recién creado
-
-¡Hola mundo desde Git!

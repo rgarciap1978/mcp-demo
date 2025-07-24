@@ -1,0 +1,12 @@
+# Excluir directorios principales
+node_modules/
+dist/
+
+# Opcional: Excluir archivos de configuración local (ej: .env)
+.env
+.env.local
+
+# Opcional: Excluir archivos de sistema (macOS) y logs
+.DS_Store
+logs/
+npm-debug.log*
