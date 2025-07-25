@@ -28,7 +28,10 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
                 inputSchema: {
                     type: "object",
                     properties: {
-                        name: { type: "string", description: "The name of the person to greet" }
+                        name: { 
+                            type: "string", 
+                            description: "The name of the person to greet" 
+                        }
                     },
                     required: ["name"]
                 }
@@ -53,13 +56,16 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         }
     }
 
-    throw new Error('Tool ${name} not found');
+    throw new Error(`Tool ${name} not found`);
 });
 
 async function main(): Promise<void> {
     const transport = new StdioServerTransport();
+    
     await server.connect(transport);
-    console.log("Minimal MCP Demo Server is running...");
+    //console.log("Minimal MCP Demo Server is running...");
+
+    process.stdin.resume();
 }
 
 main().catch((error: Error) => {
